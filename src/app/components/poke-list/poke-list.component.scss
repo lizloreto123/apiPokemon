@@ -1,0 +1,11 @@
+.pokemon-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    font-family: 'Press Start 2P', sans-serif;
+  }
+  
+  .poke-card {
+    margin: 10px;
+    width: 200px;
+  }

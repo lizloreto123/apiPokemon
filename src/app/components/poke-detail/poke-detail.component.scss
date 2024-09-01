@@ -1,0 +1,74 @@
+.poke-detail-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  background-color: #f0f0f0; // Light gray background for better contrast
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Add a subtle shadow
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.poke-detail-image {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.poke-detail-info {
+  max-width: 600px; 
+  padding: 10px;
+}
+
+h2 {
+  font-family: 'Press Start 2P', sans-serif;
+  font-size: 2rem;
+  color: #ffcb05; 
+  margin-bottom: 10px;
+}
+
+p, h3 {
+  font-family: 'Press Start 2P', sans-serif;
+  color: #333; // Dark gray for better readability
+  margin: 5px 0;
+}
+
+h3 {
+  margin-top: 20px;
+  font-size: 1.5rem;
+  color: #3b4cca; 
+}
+
+.stats-list {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  margin: 10px 0;
+}
+
+.stat-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #d6eaf8; // Light blue background
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+.stat-name {
+  font-weight: bold;
+}
+
+.stat-value {
+  font-weight: normal;
+  color: #555; // Slightly lighter color for values
+}
+
+p strong {
+  color: #333; // Darker color for labels
+}
+

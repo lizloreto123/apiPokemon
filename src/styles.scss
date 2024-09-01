@@ -1,0 +1,181 @@
+
+/* Importar fuentes de Google */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+
+/* Estilos globales */
+body {
+  font-family: 'Poppins', sans-serif;
+ // background: url('assets/fondo6.avif') no-repeat center center fixed; /* Imagen de fondo */
+  background: linear-gradient(to right, #fd0000, #111111); /* Degradado de rosa a naranja */
+
+  background-size: cover;
+  color: #333; /* Color de texto oscuro para mejor legibilidad */
+  margin: 0;
+  padding: 0;
+}
+
+/* Contenedor de la lista de Pokémon */
+.pokemon-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px;
+}
+
+/* Estilos para cada tarjeta de Pokémon */
+.poke-card {
+  background: linear-gradient(to right, #fcd641, #111111) !important;/* Fondo blanco para resaltar la tarjeta */
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 15px;
+  padding: 15px;
+  text-align: center;
+  width: 200px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.poke-card:hover {
+  transform: scale(1.05); /* Efecto de zoom al pasar el cursor */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Imagen del Pokémon */
+.poke-image {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  margin-bottom: 10px;
+  display: block;
+  margin: 0 auto;
+}
+
+
+/* Estilo del contenedor de búsqueda */
+.search-container {
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Estilos para el campo de búsqueda */
+mat-form-field {
+  background-color: #ffffff; /* Fondo blanco para el campo de búsqueda */
+  border-radius: 8px;
+  padding: 5px;
+  width: 300px;
+}
+
+/* Estilos para el paginador */
+mat-paginator {
+  margin: 20px;
+  background-color: #131212;
+  color: #333;
+}
+
+/* Estilos del botón de detalles */
+a.mat-button {
+  color: #f2a900; /* Color amarillo para el botón */
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: #0056d2 ; /* Color azul de fondo */
+  border-radius: 8px;
+  padding: 5px 15px;
+  text-decoration: none;
+}
+
+a.mat-button:hover {
+  color: #e7a700; /* Color amarillo oscuro al pasar el cursor */
+  background-color: #0043a4; /* Color azul oscuro al pasar el cursor */
+}
+
+/* Estilo del contenedor de detalles de Pokémon */
+.poke-detail-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+
+/* Imagen del detalle del Pokémon */
+.poke-detail-image {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  margin-bottom: 20px;
+}
+
+/* Información del detalle del Pokémon */
+.poke-detail-info {
+  text-align: center;
+  max-width: 600px;
+}
+
+/* Títulos y secciones de detalles */
+h2 {
+  color: #ffcb05; /* Color amarillo Pokémon */
+}
+
+h3 {
+  color: #0e0d0d;
+}
+
+
+
+
+/* Contenedor principal del encabezado */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #111111;
+  border-bottom: 3px solid #ffcb05; /* Línea inferior amarilla */
+  flex-wrap: wrap;
+}
+
+/* Contenedor del logo y título */
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+/* Estilo del icono de Pokémon (Pikachu) */
+.logo-icon {
+  width: 100px;
+  height: 100px;
+  margin-right: 15px;
+  background-image: url('assets/icono2.gif'); /* Ruta de la imagen de Pikachu */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  flex-shrink: 0; /* Evita que la imagen se redimensione */
+}
+
+/* Estilo del título WIKI POKEMON */
+.wiki-title {
+  font-family: 'Press Start 2P', sans-serif;
+  font-size: 50px;
+  color: #ffcb05; /* Color amarillo Pokémon */
+  white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+}
+
+/* Contenedor de la barra de búsqueda */
+.search-container {
+  display: flex;
+  align-items: center;
+}
+
+/* Estilos para el campo de búsqueda */
+mat-form-field {
+  background-color: #ffffff; /* Fondo blanco para el campo de búsqueda */
+  border-radius: 8px;
+  padding: 5px;
+  width: 300px;
+}
+
+/* Icono de búsqueda en el campo de búsqueda */
+mat-icon {
+  color: #ffcb05; /* Color del icono de búsqueda */
+}

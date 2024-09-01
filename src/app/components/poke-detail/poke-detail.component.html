@@ -17,5 +17,14 @@
     <p><strong>Species:</strong> {{ species }}</p>
     <p><strong>Habitat:</strong> {{ habitat }}</p>
     <p><strong>Color:</strong> {{ color }}</p>
+  
+     <!-- Imagen de la evolución -->
+     <h3>Next Evolution:</h3>
+     <div *ngIf="hasEvolution">
+       <img [src]="evolutionImage" class="poke-detail-image" alt="Next Evolution">
+     </div>
+     <div *ngIf="!hasEvolution">
+       <p>Ya no tiene Evolución</p>
+     </div>
   </div>
 </div>

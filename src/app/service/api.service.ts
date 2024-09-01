@@ -17,4 +17,12 @@ export class PokemonService {
   getPokemonDetails(identifier: string): Observable<any> { 
     return this.http.get<any>(`${this.apiUrl}/${identifier}`);
   }
+
+  getSpecies(url: string): Observable<any> {
+    return this.http.get<any>(url);
+  }
+
+  getEvolutionChain(url: string): Observable<any> {
+    return this.http.get<any>(url);
+  }
 }

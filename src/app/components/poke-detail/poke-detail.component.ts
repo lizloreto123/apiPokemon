@@ -18,6 +18,8 @@ export class PokeDetailComponent implements OnInit {
   species: string = '';
   habitat: string = '';
   color: string = '';
+  evolutionImage: string | null = null;
+  hasEvolution: boolean = false;
 
   constructor(
     private route: ActivatedRoute,
@@ -40,8 +42,37 @@ export class PokeDetailComponent implements OnInit {
           this.species = data.species?.name || 'Unknown'; // Modifica según la API
           this.habitat = data.habitat?.name || 'Unknown'; // Modifica según la API
           this.color = data.color?.name || 'Unknown'; // Modifica según la API
+
+          if (data.species?.url) {
+            this.pokemonService.getSpecies(data.species.url).subscribe((speciesData: any) => {
+              if (speciesData.evolution_chain?.url) {
+                this.pokemonService.getEvolutionChain(speciesData.evolution_chain.url).subscribe((evolutionData: any) => {
+                  this.extractEvolutionImage(evolutionData, name);
+                });
+              }
+            });
+          }
         });
       }
     });
+  }
+
+  extractEvolutionImage(evolutionData: any, currentPokemonName: string): void {
+    let currentEvolution = evolutionData.chain;
+
+    while (currentEvolution && currentEvolution.species.name !== currentPokemonName) {
+      currentEvolution = currentEvolution.evolves_to[0];
+    }
+
+    if (currentEvolution && currentEvolution.evolves_to.length > 0) {
+      const nextEvolution = currentEvolution.evolves_to[0].species.name;
+      this.pokemonService.getPokemonDetails(nextEvolution).subscribe(nextEvolutionData => {
+        this.evolutionImage = nextEvolutionData.sprites?.front_default || null;
+        this.hasEvolution = true;
+      });
+    } else {
+      this.evolutionImage = null;
+      this.hasEvolution = false;
+    }
   }
 }
